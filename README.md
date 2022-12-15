@@ -12,7 +12,7 @@ Limited React Native wrapper around the [classic Zendesk Support SDK](https://de
 ## Installation
 
 ```sh
-npm install react-native-zendesk-support
+npm install @metalpay/react-native-zendesk-support
 ```
 
 ## Usage
