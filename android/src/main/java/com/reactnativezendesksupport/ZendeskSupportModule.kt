@@ -67,13 +67,12 @@ class ZendeskSupportModule(reactContext: ReactApplicationContext) :
           if (groupIds.size() == 0) {
             return@let
           }
-          val ids = groupIds.toArrayList().map { groupId -> groupId as Long }
+          val ids = groupIds.toArrayList().map { groupId -> (groupId as Double).toLong() }
           when (groupType) {
             1 -> helpCenterConfigurationBuilder.withArticlesForSectionIds(ids)
             2 -> helpCenterConfigurationBuilder.withArticlesForCategoryIds(ids)
             else -> {}
           }
-
         }
       }
 
@@ -98,5 +97,4 @@ class ZendeskSupportModule(reactContext: ReactApplicationContext) :
       promise.resolve("Help center created")
     }
   }
-
 }
